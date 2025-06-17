@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestionnaire de Tâches</title>
+    <link rel="stylesheet" href="style.css">
+  <!--<style>
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .task {
+      border: 1px solid #ccc;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .high { border-left: 5px solid red; }
+    .medium { border-left: 5px solid orange; }
+    .low { border-left: 5px solid green; }
+  </style>-->
+</head>
+<body>
+  <h1>Gestionnaire de Tâches</h1>
+
+  <form id="task-form">
+    <input type="text" id="title" placeholder="Titre" required />
+    <input type="text" id="description" placeholder="Description" required />
+    <select id="priority">
+      <option value="Basse">Basse</option>
+      <option value="Moyenne">Moyenne</option>
+      <option value="Haute">Haute</option>
+    </select>
+    <button type="submit">Ajouter la tâche</button>
+  </form>
+
+  <div>
+    <button data-filter="all">Toutes</button>
+    <button data-filter="active">Actives</button>
+    <button data-filter="completed">Terminées</button>
+  </div>
+
+  <h3>Tâches restantes : <span id="task-counter">0</span></h3>
+
+  <div id="task-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
